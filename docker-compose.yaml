@@ -1,0 +1,83 @@
+version: "3"
+
+services:
+  api:
+    container_name: api-service
+    build:
+      context: .
+      dockerfile: api-service/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATA_SERVICE_HOST: "${DATA_SERVICE_HOST:-http://data:8001/api/}"
+    restart: always
+    depends_on:
+      - data
+
+  data:
+    container_name: data-service
+    build:
+      context: .
+      dockerfile: data-service/Dockerfile
+    environment:
+      MONGODB_URI: ${MONGODB_URI:-mongodb:27017}
+      MONGODB_USERNAME: ${MONGODB_USERNAME:-root}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD:-root}
+    ports:
+      - "8001"
+    restart: always
+    depends_on:
+      - broker
+      - mongodb
+
+  mongodb:
+    container_name: monogdb
+    image: 'mongo:4.2.16-bionic'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "${MONGODB_USERNAME:-root}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGODB_PASSWORD:-root}"
+    volumes:
+      - mongodb-data:/data/db
+    ports:
+      - "27017"
+
+  broker:
+    image: confluentinc/cp-kafka:7.0.1
+    container_name: broker
+    ports:
+      - "9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,PLAINTEXT_INTERNAL://broker:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "my-topic"
+    healthcheck:
+      test: [ "CMD", "kafka-topics.sh", "--list", "--zookeeper", "zookeeper:2181" ]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.0.1
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui
+    container_name: kafka-ui
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=localhost
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=host.docker.internal:9092
+
+volumes:
+  mongodb-data:

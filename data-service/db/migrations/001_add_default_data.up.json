@@ -1,0 +1,946 @@
+[
+  {
+    "delete": "authors",
+    "deletes": [
+      {
+        "q": {},
+        "limit": 0
+      }
+    ]
+  },
+  {
+    "insert": "authors",
+    "documents": [
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef5"
+        },
+        "name": "Mary Johnson",
+        "email": "maryjohnson@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef6"
+        },
+        "name": "Michael Davis",
+        "email": "michaeldavis@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef7"
+        },
+        "name": "Sarah Wilson",
+        "email": "sarahwilson@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b6"
+        },
+        "name": "William Brown",
+        "email": "williambrown@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef9"
+        },
+        "name": "Jennifer Garcia",
+        "email": "jennifergarcia@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efa"
+        },
+        "name": "Christopher Martinez",
+        "email": "christophermartinez@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efb"
+        },
+        "name": "Elizabeth Lee",
+        "email": "elizabethlee@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efc"
+        },
+        "name": "Daniel Clark",
+        "email": "danielclark@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efd"
+        },
+        "name": "Ava Rodriguez",
+        "email": "avarodriguez@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efe"
+        },
+        "name": "Joseph Wright",
+        "email": "josephwright@example.com",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84eff"
+        },
+        "name": "Samantha Johnson",
+        "email": "samantha.johnson@example.com",
+        "avatar": "https://example.com/avatar/samantha_johnson.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b7"
+        },
+        "name": "David Lee",
+        "email": "david.lee@example.com",
+        "avatar": "https://example.com/avatar/david_lee.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b8"
+        },
+        "name": "Emily Chen",
+        "email": "emily.chen@example.com",
+        "avatar": "https://example.com/avatar/emily_chen.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "name": "Maximilian Mueller",
+        "email": "max.mueller@example.com",
+        "avatar": "https://example.com/avatar/max_mueller.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b5"
+        },
+        "name": "Sophie Jackson",
+        "email": "sophie.jackson@example.com",
+        "avatar": "https://example.com/avatar/sophie_jackson.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "623567dd895a790c3b43e399"
+        },
+        "name": "Alexander Kim",
+        "email": "alexander.kim@example.com",
+        "avatar": "https://example.com/avatar/alexander_kim.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "6235680a895a790c3b43e3a0"
+        },
+        "name": "Olivia Wang",
+        "email": "olivia.wang@example.com",
+        "avatar": "https://example.com/avatar/olivia_wang.jpg"
+      },
+      {
+        "_id": {
+          "$oid": "6235683a895a790c3b43e3a5"
+        },
+        "name": "Lucas Hernandez",
+        "email": "lucas.hernandez@example.com",
+        "avatar": "https://example.com/avatar/lucas_hernandez.jpg"
+      }
+    ]
+  },
+  {
+    "delete": "videos",
+    "deletes": [
+      {
+        "q": {},
+        "limit": 0
+      }
+    ]
+  },
+  {
+    "insert": "videos",
+    "documents": [
+      {
+        "title": "Getting Started with MongoDB",
+        "description": "Learn the basics of MongoDB in this introductory tutorial.",
+        "views": 34005,
+        "likes": 523,
+        "dislikes": 32,
+        "tags": [
+          "MongoDB",
+          "database",
+          "tutorial"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b6"
+        },
+        "duration": 1200,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b7"
+            },
+            "content": "Great tutorial, thanks for sharing!",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef5"
+                },
+                "content": "Glad you found it helpful!"
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "I didn't understand the part about indexing, can you explain more?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b6"
+                },
+                "content": "Sure, I can make a separate video on that topic. Stay tuned!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Advanced MongoDB Techniques",
+        "description": "Take your MongoDB skills to the next level with these advanced techniques.",
+        "views": 4567,
+        "likes": 123,
+        "dislikes": 12,
+        "tags": [
+          "MongoDB",
+          "database",
+          "advanced"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b7"
+        },
+        "duration": 1800,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "This is exactly what I was looking for, thank you!",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef7"
+                },
+                "content": "Glad to hear it! Let me know if you have any questions."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Building RESTful APIs with Node.js and MongoDB",
+        "description": "Learn how to build RESTful APIs using Node.js and MongoDB.",
+        "views": 123123,
+        "likes": 1987,
+        "dislikes": 324,
+        "tags": [
+          "Node.js",
+          "MongoDB",
+          "API",
+          "tutorial"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b8"
+        },
+        "duration": 2400,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "Excellent tutorial, very clear and easy to follow.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef9"
+                },
+                "content": "Thank you! I'm glad you found it helpful."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efa"
+            },
+            "content": "Can you share the code for this tutorial?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b8"
+                },
+                "content": "Sure, you can find the code on my GitHub repo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "MongoDB Performance Tuning",
+        "description": "Learn how to optimize the performance of your MongoDB database.",
+        "views": 879789,
+        "likes": 12433,
+        "dislikes": 2344,
+        "tags": [
+          "MongoDB",
+          "database",
+          "performance"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "duration": 3000,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "This is exactly what I needed, thank you!",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b9"
+                },
+                "content": "You're welcome! Let me know if you have any questions."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How to Make a Perfect Omelette",
+        "description": "Learn the secrets to making a perfect omelette every time.",
+        "views": 78678,
+        "likes": 1233,
+        "dislikes": 123,
+        "tags": [
+          "cooking",
+          "breakfast",
+          "omelette",
+          "recipe"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efc"
+        },
+        "duration": 600,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efa"
+            },
+            "content": "I tried your recipe and it turned out amazing! Thanks for sharing!",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84efc"
+                },
+                "content": "That's great to hear! I'm glad you enjoyed it."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b8"
+            },
+            "content": "This looks delicious! I can't wait to try it.",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Funny Cat Videos",
+        "description": "Watch the funniest cat videos on the internet!",
+        "views": 10000,
+        "likes": 500,
+        "dislikes": 20,
+        "tags": [
+          "cats",
+          "funny",
+          "animals",
+          "pets"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efd"
+        },
+        "duration": 1200,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efe"
+            },
+            "content": "I can't stop laughing! These cats are hilarious.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84efd"
+                },
+                "content": "Glad you enjoyed it! Which one was your favorite?"
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "I love cats! Thanks for sharing this.",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Amazing Nature Time-Lapse",
+        "description": "Experience the beauty of nature through stunning time-lapse footage.",
+        "views": 142412,
+        "likes": 1243,
+        "dislikes": 213,
+        "tags": [
+          "nature",
+          "time-lapse",
+          "photography",
+          "landscape"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efb"
+        },
+        "duration": 1800,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efc"
+            },
+            "content": "Wow, these time-lapse shots are incredible. What camera did you use?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84efb"
+                },
+                "content": "Thanks! I used a Sony A7R III with a variety of lenses."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b7"
+            },
+            "content": "This is so relaxing to watch. Thanks for sharing!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Hiking the Grand Canyon",
+        "description": "Join us on an epic journey through one of America's most stunning natural wonders.",
+        "views": 14242,
+        "likes": 1221,
+        "dislikes": 2,
+        "tags": [
+          "travel",
+          "hiking",
+          "adventure",
+          "national park"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84efb"
+        },
+        "duration": 3600,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efd"
+            },
+            "content": "This is on my bucket list! How long did it take you to hike the whole thing?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84efb"
+                },
+                "content": "It took us about 3 days, but we took our time and enjoyed the scenery."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "I've been there before and it's even more beautiful in person. Thanks for sharing your experience!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Best Street Food in Tokyo",
+        "description": "Discover the best hidden street food gems in Tokyo with our foodie guide.",
+        "views": 5000,
+        "likes": 200,
+        "dislikes": 400,
+        "tags": [
+          "food",
+          "travel",
+          "Japan",
+          "street food"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "duration": 2400,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efb"
+            },
+            "content": "I've been to Tokyo before and the food there is amazing! What was your favorite dish?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b8"
+                },
+                "content": "Definitely the takoyaki, or octopus balls. So delicious!"
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efd"
+            },
+            "content": "I've always wanted to go to Japan and try the street food. Thanks for the recommendations!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Best Funny Animal Videos Compilation",
+        "description": "Get ready to laugh with this hilarious compilation of animal videos!",
+        "views": 1231233,
+        "likes": 13000,
+        "dislikes": 20200,
+        "tags": [
+          "animals",
+          "funny",
+          "compilation",
+          "pets"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b5"
+        },
+        "duration": 1200,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84efc"
+            },
+            "content": "I can't stop laughing! The goat screaming was my favorite.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b5"
+                },
+                "content": "Haha, that one always gets me too. Glad you enjoyed the video!"
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b6"
+            },
+            "content": "I love these kinds of videos. They always brighten up my day!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How to Make Sushi - Step by Step Guide",
+        "description": "Learn how to make sushi from scratch with this step-by-step guide. You'll be making delicious sushi rolls in no time!",
+        "views": 9824,
+        "likes": 567,
+        "dislikes": 32,
+        "tags": [
+          "cooking",
+          "sushi",
+          "recipe"
+        ],
+        "author_id": {
+          "$oid": "623567dd895a790c3b43e399"
+        },
+        "duration": 870,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "6235680a895a790c3b43e3a0"
+            },
+            "content": "Great video! Can't wait to try making my own sushi.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "623567dd895a790c3b43e399"
+                },
+                "content": "Thanks for watching! Let me know how your sushi turns out."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "10 Minute Yoga Flow for Stress Relief",
+        "description": "Relax and destress with this quick 10 minute yoga flow. You'll feel refreshed and rejuvenated in no time!",
+        "views": 2500,
+        "likes": 112,
+        "dislikes": 4,
+        "tags": [
+          "yoga",
+          "meditation",
+          "wellness"
+        ],
+        "author_id": {
+          "$oid": "6235683a895a790c3b43e3a5"
+        },
+        "duration": 600,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "6235683a895a790c3b43e3a5"
+            },
+            "content": "Glad you enjoyed the video! Let me know if you have any other requests for yoga flows.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "623567dd895a790c3b43e399"
+                },
+                "content": "Thanks for the great video! I'd love to see a yoga flow for beginners."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How to Make Pancakes",
+        "description": "Learn how to make delicious pancakes from scratch",
+        "views": 200,
+        "likes": 10,
+        "dislikes": 0,
+        "tags": [
+          "cooking",
+          "breakfast"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef5"
+        },
+        "duration": 180,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "Thanks for the recipe, I can't wait to try it!",
+            "replies": [
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "Looks great, but can you substitute the flour with almond flour?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef5"
+                },
+                "content": "Yes, you can substitute with almond flour, but the texture may be slightly different."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cute Cats Compilation",
+        "description": "Watch these adorable cats do funny things",
+        "views": 512200,
+        "likes": 51220,
+        "dislikes": 2124,
+        "tags": [
+          "cats",
+          "animals",
+          "funny"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef6"
+        },
+        "duration": 300,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef5"
+            },
+            "content": "These cats are so cute!",
+            "replies": [
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "Thanks for watching!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Gaming Mouse of 2021",
+        "description": "Check out the top gaming mice for competitive gaming",
+        "views": 100420,
+        "likes": 84420,
+        "dislikes": 512,
+        "tags": [
+          "gaming",
+          "technology"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef5"
+        },
+        "duration": 240,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "What's the difference between these mice and regular mice?",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef5"
+                },
+                "content": "Gaming mice typically have higher sensitivity and more buttons for customizability."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How to Make Pancakes",
+        "description": "In this video, we show you how to make delicious pancakes from scratch.",
+        "views": 143251,
+        "likes": 500,
+        "dislikes": 50,
+        "tags": [
+          "pancakes",
+          "breakfast",
+          "cooking"
+        ],
+        "author_id": {
+          "$oid": "615dca5dc6a5f6b5d6b84ef6"
+        },
+        "duration": 300,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "These pancakes look amazing! I can't wait to try making them myself.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615dca5dc6a5f6b5d6b84ef6"
+                },
+                "content": "Thanks! Let us know how they turn out."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef5"
+            },
+            "content": "I've tried this recipe and it's amazing! Thanks for sharing.",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Gymnastics Tutorial",
+        "description": "Learn how to do basic gymnastics moves in this tutorial.",
+        "views": 5012400,
+        "likes": 200124,
+        "dislikes": 21420,
+        "tags": [
+          "gymnastics",
+          "tutorial",
+          "fitness"
+        ],
+        "author_id": {
+          "$oid": "623567dd895a790c3b43e399"
+        },
+        "duration": 64200,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef5"
+            },
+            "content": "Great tutorial! I'm definitely going to try some of these moves.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "623567dd895a790c3b43e399"
+                },
+                "content": "Thanks for watching! Let us know how it goes."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b5"
+            },
+            "content": "I've been trying to improve my flexibility for ages and this video has been a huge help!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Introduction to Web Development",
+        "description": "In this video, we introduce you to the basics of web development, including HTML, CSS, and JavaScript.",
+        "views": 15000,
+        "likes": 75120,
+        "dislikes": 12400,
+        "tags": [
+          "web development",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "duration": 900,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b5"
+            },
+            "content": "Great video! I'm just starting out with web development and this has been really helpful.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b9"
+                },
+                "content": "Glad to hear it! Let us know if you have any questions."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "This is a great refresher for me as a web developer. Thanks for sharing!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cybersecurity Fundamentals",
+        "description": "In this video, we cover the basics of cybersecurity, including common threats and how to protect against them.",
+        "views": 2001200,
+        "likes": 104200,
+        "dislikes": 20210,
+        "tags": [
+          "cybersecurity",
+          "network security",
+          "data privacy"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "duration": 1800,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "This is really helpful information. I've been looking for a good cybersecurity resource.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b9"
+                },
+                "content": "Glad we could help! Cybersecurity is such an important topic in today's world."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "I work in IT and this is a great refresher for me. Thanks for sharing!",
+            "replies": [
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mastering Yoga: The Basics",
+        "description": "In this video, we cover the basics of yoga, including key poses and breathing techniques.",
+        "views": 512000,
+        "likes": 25420,
+        "dislikes": 5420,
+        "tags": [
+          "yoga",
+          "fitness",
+          "health"
+        ],
+        "author_id": {
+          "$oid": "615bfe23ee047d6c9f6c09b9"
+        },
+        "duration": 2400,
+        "comments": [
+          {
+            "author_id": {
+              "$oid": "615dca5dc6a5f6b5d6b84ef6"
+            },
+            "content": "Thanks for this video! I'm just starting out with yoga and this was really helpful.",
+            "replies": [
+              {
+                "author_id": {
+                  "$oid": "615bfe23ee047d6c9f6c09b9"
+                },
+                "content": "Glad we could help! Yoga is such a great way to improve flexibility and reduce stress."
+              }
+            ]
+          },
+          {
+            "author_id": {
+              "$oid": "615bfe23ee047d6c9f6c09b9"
+            },
+            "content": "I've been doing yoga for years and this was still a great refresher. Thanks!",
+            "replies": [
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
